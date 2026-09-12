@@ -1,0 +1,23 @@
+{
+  "pages": [
+    { "id": "page-1", "name": "Homepage" },
+    { "id": "page-2", "name": "Directions" }
+  ],
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Homepage · Desktop", "x": 0, "y": 0, "w": 1440, "h": 6800, "page": "page-1" },
+    { "file": "Mobile.dc.html", "title": "Homepage · Mobile", "x": 1600, "y": 0, "w": 390, "h": 5950, "page": "page-1" },
+    { "file": "CinematicReel.dc.html", "title": "A · Cinematic Reel", "x": 0, "y": 0, "w": 1440, "h": 3300, "page": "page-2" },
+    { "file": "FieldJournal.dc.html", "title": "B · Field Journal", "x": 1600, "y": 0, "w": 1440, "h": 3700, "page": "page-2" },
+    { "file": "Altitude.dc.html", "title": "C · Altitude Index", "x": 3200, "y": 0, "w": 1440, "h": 3200, "page": "page-2" },
+    { "file": "CreatorHub.dc.html", "title": "D · Creator Hub", "x": 4800, "y": 0, "w": 1440, "h": 3100, "page": "page-2" }
+  ],
+  "annotations": [
+    { "id": "the-mix", "page": "page-1", "x": 2120, "y": 0, "w": 560, "text": "Cinematic Journal — A + B\n\nThe page alternates. Black sections are for watching (showreel, featured documentary, photographs) in A's cinematic style. Paper-white sections are for reading (your story, latest videos, contact) in B's magazine style.\n\nType: wide Archivo from your logo for impact, Instrument Serif italic for the storyteller's voice, mono for timecodes and places.\n\nLike your references (Peter McKinnon, Dan Mace, Casey Neistat, Sisan Baniya), it leads with full-bleed footage and confident type, but keeps a slower, documentary voice of its own.\n\nFeatured film and 'More documentaries' use your five documentary links.\n\nThe 'blackAndWhitePhotos' switch above each board shows the photos in colour.\n\nAnything in [brackets] still needs your real info." },
+    { "id": "how-to-pick", "page": "page-2", "x": -760, "y": 0, "w": 600, "text": "The original four directions\n\nKept for reference. The homepage on the first page mixes A (Cinematic Reel) and B (Field Journal)." },
+    { "id": "note-a", "page": "page-2", "x": 0, "y": -380, "w": 900, "text": "A · Cinematic Reel — black\nOpens like a film: full-bleed showreel in a viewfinder frame, huge extended type that echoes the logo. Video and documentaries lead.\nTradeoff: needs a strong showreel to land, and long reading (synopses, stories) is harder on black." },
+    { "id": "note-b", "page": "page-2", "x": 1600, "y": -380, "w": 900, "text": "B · Field Journal — paper white\nA printed magazine: serif headlines, captioned photographs, a documentary feature and numbered stories. Storytelling first.\nTradeoff: calm and slow — less punchy for YouTube viewers who just want to hit play." },
+    { "id": "note-c", "page": "page-2", "x": 3200, "y": -380, "w": 900, "text": "C · Altitude Index — grey white\nSwiss grid, mono details and map contours, with an index of every project. Reads as a serious studio for NGOs, brands and festivals.\nTradeoff: the coolest and least emotional; the hover previews in the index don't exist on phones." },
+    { "id": "note-d", "page": "page-2", "x": 4800, "y": -380, "w": 900, "text": "D · Creator Hub — bright white\nYouTube-first: latest video up top, category chips, a video grid, documentary posters and a clear 'Work with me' band. Built to grow subscribers and bookings.\nTradeoff: feels more like a channel than a premium portfolio; photographs get the least room." }
+  ],
+  "launch": { "view": "canvas", "page": "page-1" }
+}

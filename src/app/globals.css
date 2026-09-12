@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-night: #000000;
+  --color-ink: #0a0a0a;
+  --color-coal: #1a1a1a;
+  --color-line-dark: #262625;
+  --color-dim: #6c6c69;
+  --color-smoke: #9b9b98;
+  --color-ash: #b8b8b5;
+  --color-fog: #d6d6d3;
+  --color-bone: #f2f2f0;
+
+  --color-paper: #f4f4f2;
+  --color-paper-deep: #e8e8e5;
+  --color-line-light: #d0d0cd;
+  --color-stone: #6a6a68;
+  --color-graphite: #3e3e3c;
+  --color-charcoal: #111111;
+
+  --font-sans: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, Menlo, monospace;
+}
+
+/* Wide, heavy display type that echoes the logo wordmark. */
+@utility font-display {
+  font-family: var(--font-sans);
+  font-weight: 900;
+  font-stretch: 125%;
+  text-transform: uppercase;
+}
+
+/* Photos sit in black & white and bloom into colour on hover. */
+@utility photo-bw {
+  filter: grayscale(1) contrast(1.08);
+  transition: filter 700ms ease, transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-ink);
+    color: var(--color-bone);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background: var(--color-bone);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+}
+
+@media (hover: hover) {
+  .group:hover .photo-bw {
+    filter: grayscale(0) contrast(1);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reveal {
+  animation: rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+  }
+  .photo-bw {
+    transition: none;
+  }
+}

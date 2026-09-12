@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;display=swap">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fafaf8; color: #0c0c0c; font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #0c0c0c; text-decoration: underline; } a:hover { color: #6a6a68; }
+  </style>
+</helmet>
+<div style="width: 1440px; background: #fafaf8; color: #0c0c0c; display: flex; flex-direction: column;">
+
+  <nav style="padding: 22px 48px; display: flex; align-items: center; justify-content: space-between;">
+    <img src="logo-h-black.png" style="height: 36px; display: block;">
+    <div style="display: flex; align-items: center; gap: 32px; font-size: 15px; font-weight: 500;">
+      <span>Videos</span>
+      <span>Documentaries</span>
+      <span>Photos</span>
+      <span>About</span>
+      <span>Work with me</span>
+      <div style="display: flex; align-items: center; gap: 8px; padding: 12px 20px; background: #0c0c0c; color: #fafaf8; border-radius: 999px; font-weight: 700;">
+        <svg width="12" height="12" viewBox="0 0 14 14"><path d="M3 1.5 L12 7 L3 12.5 Z" fill="currentColor"></path></svg>
+        <span>Subscribe</span>
+      </div>
+    </div>
+  </nav>
+
+  <section style="padding: 32px 48px 96px; display: flex; gap: 56px; align-items: center;">
+    <div style="width: 560px; flex-shrink: 0; display: flex; flex-direction: column; gap: 24px;">
+      <div style="align-self: flex-start; display: flex; align-items: center; gap: 8px; padding: 7px 14px; border: 1.5px solid #0c0c0c; border-radius: 999px; font-size: 13px; font-weight: 700;">
+        <div style="width: 7px; height: 7px; border-radius: 50%; background: #0c0c0c;"></div>
+        <span>Latest video</span>
+      </div>
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', 'Arial Black', sans-serif; font-weight: 800; font-size: 70px; line-height: 0.98; letter-spacing: -0.04em; text-wrap: balance;">My Friend's Wild Trip to Gosikunda</h1>
+      <p style="margin: 0; font-size: 19px; line-height: 1.5; color: #6a6a68;">Vlogs, treks and documentaries from a filmmaker in Itahari — unfiltered, on the trail and in the villages.</p>
+      <div style="display: flex; gap: 12px; margin-top: 8px;">
+        <div style="display: flex; align-items: center; gap: 10px; padding: 16px 26px; background: #0c0c0c; color: #fafaf8; border-radius: 999px; font-weight: 700; font-size: 16px;">
+          <svg width="12" height="12" viewBox="0 0 14 14"><path d="M3 1.5 L12 7 L3 12.5 Z" fill="currentColor"></path></svg>
+          <span>Watch now</span>
+        </div>
+        <div style="display: flex; align-items: center; padding: 16px 26px; border: 1.5px solid #0c0c0c; border-radius: 999px; font-weight: 700; font-size: 16px;">All videos</div>
+      </div>
+    </div>
+    <div style="position: relative; flex-grow: 1; aspect-ratio: 16 / 9; border-radius: 24px; overflow: hidden; background: #d9d9d6; box-shadow: 0 30px 60px -30px rgba(12,12,12,0.4);">
+      <img src="yt-gosikunda.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+      <div style="position: absolute; left: 50%; top: 50%; width: 96px; height: 96px; margin: -48px 0 0 -48px; border-radius: 50%; background: #0c0c0c; color: #fafaf8; display: flex; align-items: center; justify-content: center;">
+        <svg width="28" height="28" viewBox="0 0 14 14"><path d="M4 2 L12 7 L4 12 Z" fill="currentColor"></path></svg>
+      </div>
+      <span style="position: absolute; right: 16px; bottom: 20px; padding: 4px 9px; background: rgba(12,12,12,0.85); color: #fafaf8; border-radius: 6px; font-size: 13px; font-weight: 700;">35:54</span>
+      <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: rgba(250,250,248,0.45);">
+        <div style="width: 38%; height: 100%; background: #fafaf8;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0 48px 104px; display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Arial Black', sans-serif; font-weight: 800; font-size: 48px; letter-spacing: -0.035em;">Latest videos</h2>
+      <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px;">
+        <span>@makaluflowcreations</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8 H13 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </div>
+    </div>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <span style="padding: 10px 18px; background: #0c0c0c; color: #fafaf8; border-radius: 999px; font-size: 14px; font-weight: 700;">All</span>
+      <span style="padding: 10px 18px; background: #ececea; border-radius: 999px; font-size: 14px; font-weight: 500;">Vlogs</span>
+      <span style="padding: 10px 18px; background: #ececea; border-radius: 999px; font-size: 14px; font-weight: 500;">Documentaries</span>
+      <span style="padding: 10px 18px; background: #ececea; border-radius: 999px; font-size: 14px; font-weight: 500;">Treks &amp; travel</span>
+      <span style="padding: 10px 18px; background: #ececea; border-radius: 999px; font-size: 14px; font-weight: 500;">Culture &amp; people</span>
+      <span style="padding: 10px 18px; background: #ececea; border-radius: 999px; font-size: 14px; font-weight: 500;">Conversations</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px 28px; margin-top: 8px;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #d9d9d6;">
+          <img src="yt-khabang.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <span style="position: absolute; right: 10px; bottom: 10px; padding: 3px 8px; background: rgba(12,12,12,0.85); color: #fafaf8; border-radius: 6px; font-size: 12px; font-weight: 700;">31:50</span>
+        </div>
+        <span style="font-size: 18px; font-weight: 700; line-height: 1.35;">यम्फु राईको खाबङ (माङ्सुक) पूजा । मकालु, सेदुवा</span>
+        <span style="font-size: 14px; color: #6a6a68;">Culture &amp; people</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #d9d9d6;">
+          <img src="yt-farming.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <span style="position: absolute; right: 10px; bottom: 10px; padding: 3px 8px; background: rgba(12,12,12,0.85); color: #fafaf8; border-radius: 6px; font-size: 12px; font-weight: 700;">31:48</span>
+        </div>
+        <span style="font-size: 18px; font-weight: 700; line-height: 1.35;">बाँझो जमिनबाट सुन फलाउँदै! रुद्राक्ष, अलैँची र सुन्तला खेती</span>
+        <span style="font-size: 14px; color: #6a6a68;">Documentaries</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #d9d9d6;">
+          <img src="yt-v60.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <span style="position: absolute; right: 10px; bottom: 10px; padding: 3px 8px; background: rgba(12,12,12,0.85); color: #fafaf8; border-radius: 6px; font-size: 12px; font-weight: 700;">32:25</span>
+        </div>
+        <span style="font-size: 18px; font-weight: 700; line-height: 1.35;">V60 Coffee with Makalu Flow | Shirshak Limbu</span>
+        <span style="font-size: 14px; color: #6a6a68;">Conversations</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #d9d9d6;">
+          <img src="yt-charrate.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <span style="position: absolute; right: 10px; bottom: 10px; padding: 3px 8px; background: rgba(12,12,12,0.85); color: #fafaf8; border-radius: 6px; font-size: 12px; font-weight: 700;">1:17:37</span>
+        </div>
+        <span style="font-size: 18px; font-weight: 700; line-height: 1.35;">Charrate — Most Beautiful Place in East Nepal</span>
+        <span style="font-size: 14px; color: #6a6a68;">Treks &amp; travel</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #d9d9d6;">
+          <img src="yt-kasuwa.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <span style="position: absolute; right: 10px; bottom: 10px; padding: 3px 8px; background: rgba(12,12,12,0.85); color: #fafaf8; border-radius: 6px; font-size: 12px; font-weight: 700;">20:26</span>
+        </div>
+        <span style="font-size: 18px; font-weight: 700; line-height: 1.35;">Unbelievable Flood Damage at Kasuwa Khola Hydropower</span>
+        <span style="font-size: 14px; color: #6a6a68;">Documentaries</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #d9d9d6;">
+          <img src="yt-antu.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <span style="position: absolute; right: 10px; bottom: 10px; padding: 3px 8px; background: rgba(12,12,12,0.85); color: #fafaf8; border-radius: 6px; font-size: 12px; font-weight: 700;">13:07</span>
+        </div>
+        <span style="font-size: 18px; font-weight: 700; line-height: 1.35;">At Shree Antu, Ilam | श्रीअन्तुमा हेर्ने भनेको पहिलो झुल्के घाम</span>
+        <span style="font-size: 14px; color: #6a6a68;">Treks &amp; travel</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #efefec; padding: 96px 48px; display: flex; flex-direction: column; gap: 36px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Arial Black', sans-serif; font-weight: 800; font-size: 48px; letter-spacing: -0.035em;">Documentaries</h2>
+      <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px;">
+        <span>All films</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8 H13 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="position: relative; aspect-ratio: 2 / 3; border-radius: 14px; overflow: hidden; background: #d0d0cd;">
+          <img src="waterfall.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 20px 20px; background: linear-gradient(180deg, rgba(12,12,12,0) 0%, rgba(12,12,12,0.8) 100%); color: #fafaf8; font-family: 'Bricolage Grotesque', 'Arial Black', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.02em;">[Film title]</div>
+        </div>
+        <span style="font-size: 14px; color: #6a6a68;">[Year] · [Runtime] min</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="position: relative; aspect-ratio: 2 / 3; border-radius: 14px; overflow: hidden; background: #d0d0cd;">
+          <img src="elder.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 20px 20px; background: linear-gradient(180deg, rgba(12,12,12,0) 0%, rgba(12,12,12,0.8) 100%); color: #fafaf8; font-family: 'Bricolage Grotesque', 'Arial Black', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.02em;">[Film title]</div>
+        </div>
+        <span style="font-size: 14px; color: #6a6a68;">[Year] · [Runtime] min</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="position: relative; aspect-ratio: 2 / 3; border-radius: 14px; overflow: hidden; background: #d0d0cd;">
+          <img src="porter.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 20px 20px; background: linear-gradient(180deg, rgba(12,12,12,0) 0%, rgba(12,12,12,0.8) 100%); color: #fafaf8; font-family: 'Bricolage Grotesque', 'Arial Black', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.02em;">[Film title]</div>
+        </div>
+        <span style="font-size: 14px; color: #6a6a68;">[Year] · [Runtime] min</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="position: relative; aspect-ratio: 2 / 3; border-radius: 14px; overflow: hidden; background: #d0d0cd;">
+          <img src="snow-lake.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 20px 20px; background: linear-gradient(180deg, rgba(12,12,12,0) 0%, rgba(12,12,12,0.8) 100%); color: #fafaf8; font-family: 'Bricolage Grotesque', 'Arial Black', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.02em;">[Film title]</div>
+        </div>
+        <span style="font-size: 14px; color: #6a6a68;">[Year] · [Runtime] min</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 104px 48px;">
+    <div style="background: #0c0c0c; color: #fafaf8; border-radius: 32px; padding: 72px; display: flex; justify-content: space-between; align-items: center; gap: 48px;">
+      <div style="display: flex; flex-direction: column; gap: 20px; max-width: 780px;">
+        <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9a9a97;">Work with me</span>
+        <h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Arial Black', sans-serif; font-weight: 800; font-size: 60px; line-height: 1; letter-spacing: -0.04em;">Need a documentary, a brand film or a cinematographer?</h2>
+        <p style="margin: 0; font-size: 18px; line-height: 1.5; color: #b5b5b2;">Based in Itahari, Sunsari. Tell me about your story and let's plan the shoot.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-end; flex-shrink: 0;">
+        <div style="padding: 18px 28px; background: #fafaf8; color: #0c0c0c; border-radius: 999px; font-weight: 700; font-size: 17px;">WhatsApp +977 9815370099</div>
+        <span style="font-size: 15px; color: #b5b5b2;">or email makaluflow@gmail.com</span>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding: 0 48px 44px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: #6a6a68;">
+    <img src="logo-h-black.png" style="height: 28px; display: block;">
+    <div style="display: flex; gap: 10px;">
+      <span style="padding: 9px 16px; border: 1px solid #d6d6d3; border-radius: 999px;">YouTube</span>
+      <span style="padding: 9px 16px; border: 1px solid #d6d6d3; border-radius: 999px;">Instagram</span>
+      <span style="padding: 9px 16px; border: 1px solid #d6d6d3; border-radius: 999px;">Facebook</span>
+      <span style="padding: 9px 16px; border: 1px solid #d6d6d3; border-radius: 999px;">TikTok</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"blackAndWhitePhotos":{"editor":"boolean","default":true}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const mono = this.props.blackAndWhitePhotos ?? true;
+    return { photoFilter: mono ? 'grayscale(1) contrast(1.05)' : 'none' };
+  }
+}
+</script>
+</body>
+</html>

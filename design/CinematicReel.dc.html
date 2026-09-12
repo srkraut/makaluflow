@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0a0a0a; color: #f2f2f0; font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #f2f2f0; text-decoration: underline; } a:hover { color: #b8b8b5; }
+  </style>
+</helmet>
+<div style="width: 1440px; background: #0a0a0a; color: #f2f2f0; display: flex; flex-direction: column;">
+
+  <section style="height: 920px; background: #000000; display: flex; flex-direction: column;">
+    <nav style="height: 88px; padding: 0 56px; display: flex; align-items: center; justify-content: space-between;">
+      <img src="logo-h-white.png" style="height: 34px; display: block;">
+      <div style="display: flex; align-items: center; gap: 36px; font-size: 14px; font-weight: 500; letter-spacing: 0.04em;">
+        <span style="color: #f2f2f0;">Documentaries</span>
+        <span style="color: #9b9b98;">Films</span>
+        <span style="color: #9b9b98;">Vlogs</span>
+        <span style="color: #9b9b98;">Photographs</span>
+        <span style="color: #9b9b98;">About</span>
+        <div style="padding: 11px 20px; border: 1px solid #f2f2f0; border-radius: 999px; font-weight: 600; color: #f2f2f0;">Book a shoot</div>
+      </div>
+    </nav>
+    <div style="position: relative; flex-grow: 1; overflow: hidden; background: #111111;">
+      <img src="night-valley.jpg" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+      <div style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.25) 62%, rgba(0,0,0,0.45) 100%);"></div>
+      <div style="position: absolute; left: 24px; top: 24px; width: 28px; height: 28px; border-left: 1.5px solid rgba(242,242,240,0.6); border-top: 1.5px solid rgba(242,242,240,0.6);"></div>
+      <div style="position: absolute; right: 24px; top: 24px; width: 28px; height: 28px; border-right: 1.5px solid rgba(242,242,240,0.6); border-top: 1.5px solid rgba(242,242,240,0.6);"></div>
+      <div style="position: absolute; left: 24px; bottom: 24px; width: 28px; height: 28px; border-left: 1.5px solid rgba(242,242,240,0.6); border-bottom: 1.5px solid rgba(242,242,240,0.6);"></div>
+      <div style="position: absolute; right: 24px; bottom: 24px; width: 28px; height: 28px; border-right: 1.5px solid rgba(242,242,240,0.6); border-bottom: 1.5px solid rgba(242,242,240,0.6);"></div>
+      <div style="position: absolute; left: 64px; top: 42px; display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: #d6d6d3;">
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: #f2f2f0;"></div>
+        <span>REC 00:00:12:04</span>
+      </div>
+      <div style="position: absolute; right: 64px; top: 42px; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: #d6d6d3;">
+        <span>ITAHARI, SUNSARI · NEPAL</span>
+        <span>26.66° N  87.27° E</span>
+      </div>
+      <div style="position: absolute; left: 64px; bottom: 64px; display: flex; flex-direction: column; gap: 28px;">
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; letter-spacing: 0.18em; color: #b8b8b5;">VLOGGER · DOCUMENTARY FILMMAKER · CINEMATOGRAPHER</span>
+        <h1 style="margin: 0; font-weight: 900; font-stretch: 125%; font-size: 120px; line-height: 0.9; letter-spacing: -0.01em; text-transform: uppercase; color: #f2f2f0;">Nepal,<br>frame by<br>frame.</h1>
+      </div>
+      <div style="position: absolute; right: 64px; bottom: 72px; width: 360px; display: flex; flex-direction: column; gap: 24px;">
+        <p style="margin: 0; font-size: 17px; line-height: 1.55; color: #d6d6d3;">Vlogs, documentaries and cinematography — from Itahari to the foot of Makalu.</p>
+        <div style="display: flex; gap: 12px;">
+          <div style="display: flex; align-items: center; gap: 10px; padding: 15px 22px; background: #f2f2f0; color: #0a0a0a; border-radius: 999px; font-weight: 700; font-size: 15px;">
+            <svg width="12" height="12" viewBox="0 0 14 14"><path d="M3 1.5 L12 7 L3 12.5 Z" fill="currentColor"></path></svg>
+            <span>Watch showreel</span>
+          </div>
+          <div style="display: flex; align-items: center; padding: 15px 22px; border: 1px solid #5a5a58; border-radius: 999px; font-weight: 600; font-size: 15px;">View work</div>
+        </div>
+      </div>
+    </div>
+    <div style="height: 72px; padding: 0 56px; display: flex; align-items: center; gap: 32px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.12em; color: #6c6c69;">
+      <span>SCROLL</span>
+      <div style="flex-grow: 1; height: 1px; background: #262625;"></div>
+      <span>LATEST — MY FRIEND'S WILD TRIP TO GOSIKUNDA · 35:54</span>
+    </div>
+  </section>
+
+  <section style="padding: 128px 56px 120px; display: flex; flex-direction: column; gap: 48px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #262625; padding-top: 20px;">
+      <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; letter-spacing: 0.14em; color: #9b9b98;">01 — FEATURED DOCUMENTARY</span>
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600;">
+        <span>All documentaries</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8 H13 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </div>
+    </div>
+    <div style="display: flex; gap: 64px; align-items: flex-end;">
+      <div style="position: relative; width: 820px; height: 461px; flex-shrink: 0; overflow: hidden; background: #1a1a1a;">
+        <img src="yt-khabang.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+        <div style="position: absolute; left: 50%; top: 50%; width: 88px; height: 88px; margin: -44px 0 0 -44px; border-radius: 50%; border: 1.5px solid rgba(242,242,240,0.85); background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; color: #f2f2f0;">
+          <svg width="22" height="22" viewBox="0 0 14 14"><path d="M4 2 L12 7 L4 12 Z" fill="currentColor"></path></svg>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 22px; padding-bottom: 6px;">
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.12em; color: #9b9b98;">DOCUMENTARY · MAKALU, SEDUWA · 31 MIN</span>
+        <h2 style="margin: 0; font-weight: 900; font-stretch: 125%; font-size: 40px; line-height: 0.98; text-transform: uppercase;">Khabang Puja<br>of the<br>Yamphu Rai</h2>
+        <span style="font-size: 18px; color: #b8b8b5;">यम्फु राईको खाबङ (माङ्सुक) पूजा</span>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #9b9b98;">[Two or three sentences on the ritual, the community and why you filmed it.]</p>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <div style="display: flex; align-items: center; gap: 10px; padding: 14px 22px; background: #f2f2f0; color: #0a0a0a; border-radius: 999px; font-weight: 700; font-size: 15px;">
+            <svg width="12" height="12" viewBox="0 0 14 14"><path d="M3 1.5 L12 7 L3 12.5 Z" fill="currentColor"></path></svg>
+            <span>Watch the film</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0 56px 120px; display: flex; flex-direction: column; gap: 40px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #262625; padding-top: 20px;">
+      <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; letter-spacing: 0.14em; color: #9b9b98;">02 — LATEST ON YOUTUBE</span>
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600;">
+        <span>@makaluflowcreations</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8 H13 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #1a1a1a;">
+          <img src="yt-gosikunda.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <span style="position: absolute; right: 10px; bottom: 10px; padding: 3px 7px; background: rgba(0,0,0,0.8); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px;">35:54</span>
+        </div>
+        <span style="font-size: 16px; font-weight: 600; line-height: 1.4;">My Friend's Wild Trip to Gosikunda (Unfiltered)</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #1a1a1a;">
+          <img src="yt-charrate.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <span style="position: absolute; right: 10px; bottom: 10px; padding: 3px 7px; background: rgba(0,0,0,0.8); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px;">1:17:37</span>
+        </div>
+        <span style="font-size: 16px; font-weight: 600; line-height: 1.4;">Charrate — Most Beautiful Place in East Nepal</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #1a1a1a;">
+          <img src="yt-kasuwa.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <span style="position: absolute; right: 10px; bottom: 10px; padding: 3px 7px; background: rgba(0,0,0,0.8); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px;">20:26</span>
+        </div>
+        <span style="font-size: 16px; font-weight: 600; line-height: 1.4;">Unbelievable Flood Damage at Kasuwa Khola Hydropower</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #1a1a1a;">
+          <img src="yt-v60.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};">
+          <span style="position: absolute; right: 10px; bottom: 10px; padding: 3px 7px; background: rgba(0,0,0,0.8); font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px;">32:25</span>
+        </div>
+        <span style="font-size: 16px; font-weight: 600; line-height: 1.4;">V60 Coffee with Makalu Flow | Shirshak Limbu</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0 0 120px; display: flex; flex-direction: column; gap: 40px;">
+    <div style="margin: 0 56px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #262625; padding-top: 20px;">
+      <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; letter-spacing: 0.14em; color: #9b9b98;">03 — PHOTOGRAPHS</span>
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600;">
+        <span>Open gallery</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8 H13 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </div>
+    </div>
+    <div style="display: flex; gap: 12px; height: 440px; padding: 0 56px;">
+      <div style="flex: 3 1 0; overflow: hidden; background: #1a1a1a;"><img src="elder.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};"></div>
+      <div style="flex: 3 1 0; overflow: hidden; background: #1a1a1a;"><img src="waterfall.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};"></div>
+      <div style="flex: 5 1 0; overflow: hidden; background: #1a1a1a;"><img src="makalu-lake.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};"></div>
+      <div style="flex: 3 1 0; overflow: hidden; background: #1a1a1a;"><img src="porter.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};"></div>
+      <div style="flex: 4 1 0; overflow: hidden; background: #1a1a1a;"><img src="reflection.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: {{photoFilter}};"></div>
+    </div>
+  </section>
+
+  <section style="padding: 120px 56px 48px; border-top: 1px solid #262625; display: flex; flex-direction: column; gap: 96px;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px;">
+      <h2 style="margin: 0; font-weight: 900; font-stretch: 125%; font-size: 84px; line-height: 0.92; letter-spacing: -0.01em; text-transform: uppercase;">Have a story<br>worth filming?</h2>
+      <div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-end; padding-bottom: 8px;">
+        <span style="font-size: 22px; font-weight: 600;">makaluflow@gmail.com</span>
+        <span style="font-size: 15px; color: #9b9b98;">WhatsApp +977 9815370099</span>
+        <div style="margin-top: 8px; padding: 16px 28px; background: #f2f2f0; color: #0a0a0a; border-radius: 999px; font-weight: 700; font-size: 16px;">Book a shoot</div>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.1em; color: #6c6c69;">
+      <span>© MAKALU FLOW CREATIONS</span>
+      <div style="display: flex; gap: 28px;">
+        <span>YOUTUBE</span>
+        <span>INSTAGRAM</span>
+        <span>FACEBOOK</span>
+        <span>TIKTOK</span>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"blackAndWhitePhotos":{"editor":"boolean","default":true}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const mono = this.props.blackAndWhitePhotos ?? true;
+    return { photoFilter: mono ? 'grayscale(1) contrast(1.08)' : 'none' };
+  }
+}
+</script>
+</body>
+</html>
