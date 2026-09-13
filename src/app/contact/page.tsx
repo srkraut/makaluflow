@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { PageTitle } from "@/components/PageTitle";
 import { SectionLabel } from "@/components/SectionLabel";
 import { site, whatsappLink } from "@/content/site";
 import { container } from "@/lib/ui";
@@ -32,12 +33,7 @@ export default function ContactPage() {
         />
         <div className="grid gap-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-20">
           <div className="flex flex-col gap-10">
-            <h1 className="flex flex-col font-normal">
-              <span className="font-display text-[clamp(2.1rem,5.6vw,5.5rem)] leading-[0.92]">Have a story</span>
-              <span className="font-serif text-[clamp(3rem,7vw,6.5rem)] italic leading-none tracking-[-0.02em]">
-                worth filming?
-              </span>
-            </h1>
+            <PageTitle display="Have a story" serif="worth filming?" max="5.5rem" serifScale={1.2} />
             <p className="max-w-md text-lg leading-relaxed text-graphite">
               Share the place, the people and the dates. WhatsApp is the quickest way to reach Makalu Flow.
             </p>

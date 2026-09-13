@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLink } from "@/components/ArrowLink";
 import { DocumentaryCard, documentaryImage } from "@/components/DocumentaryCard";
 import { ArrowRightIcon, PlayIcon } from "@/components/icons";
+import { PageTitle } from "@/components/PageTitle";
 import { SectionLabel, Viewfinder } from "@/components/SectionLabel";
 import { VideoRow, VideoThumb, videoMeta } from "@/components/VideoCard";
 import { documentaries, documentaryName, featuredDocumentary as film, runtimeLabel } from "@/content/documentaries";
@@ -63,25 +64,24 @@ export default async function HomePage() {
           </div>
 
           <div className="absolute inset-x-0 bottom-0">
-            <div className="mx-auto flex max-w-[1440px] flex-col gap-8 px-5 pb-9 md:px-16 md:pb-16 lg:flex-row lg:items-end lg:justify-between">
-              <div className="flex flex-col gap-5 md:gap-7">
+            <div className="mx-auto flex max-w-[1440px] flex-col gap-8 px-5 pb-9 md:px-16 md:pb-16 xl:flex-row xl:items-end xl:justify-between">
+              <div className="flex min-w-0 flex-col gap-5 md:gap-7 xl:flex-1">
                 <p className="reveal font-mono text-[10px] leading-relaxed tracking-[0.14em] text-ash md:text-[13px] md:tracking-[0.18em]">
                   VLOGGER · DOCUMENTARY FILMMAKER
                   <br className="md:hidden" />
                   <span className="hidden md:inline"> · </span>
                   CINEMATOGRAPHER
                 </p>
-                <h1 className="flex flex-col font-normal">
-                  <span className="reveal font-display text-[clamp(4rem,10.4vw,9.4rem)] leading-[0.88] [animation-delay:120ms]">
-                    Nepal,
-                  </span>
-                  <span className="reveal font-serif text-[clamp(4.5rem,10vw,9rem)] italic leading-[0.92] tracking-[-0.02em] [animation-delay:240ms]">
-                    frame by <br className="xl:hidden" />
-                    frame.
-                  </span>
-                </h1>
+                <PageTitle
+                  display="Nepal,"
+                  serif="frame by frame."
+                  max="9.4rem"
+                  serifScale={0.96}
+                  displayClassName="reveal leading-[0.88] [animation-delay:120ms]"
+                  serifClassName="reveal leading-[0.92] [animation-delay:240ms]"
+                />
               </div>
-              <div className="reveal flex max-w-[340px] flex-col gap-5 [animation-delay:400ms] md:gap-6 lg:pb-2">
+              <div className="reveal flex max-w-[340px] flex-col gap-5 [animation-delay:400ms] md:gap-6 xl:w-[340px] xl:shrink-0 xl:pb-2">
                 <p className="text-[15px] leading-relaxed text-fog md:text-[17px]">
                   Vlogs, documentaries and cinematography — from Itahari to the foot of Makalu.
                 </p>
@@ -198,20 +198,23 @@ export default async function HomePage() {
             <span className="sr-only">Watch {documentaryName(film)}</span>
           </Link>
 
-          <div className="grid gap-6 md:grid-cols-[minmax(0,600px)_minmax(0,1fr)] md:gap-[72px]">
-            <div className="flex flex-col gap-4 md:gap-5">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-[72px]">
+            <div className="flex min-w-0 flex-col gap-4 md:gap-5">
               <span className={`text-smoke ${mono}`}>
                 Documentary · {film.year} · {runtimeLabel(film.duration)}
               </span>
-              <h2 className="flex flex-col gap-1.5 font-normal">
-                <span className="font-display text-[52px] leading-[0.9] md:text-[96px]">{film.title}</span>
-                {film.subtitle && (
-                  <span className="font-serif text-[32px] italic leading-[1.05] md:text-5xl">{film.subtitle}</span>
-                )}
-              </h2>
+              <PageTitle
+                as="h2"
+                display={film.title}
+                serif={film.subtitle}
+                fit="word"
+                max="6rem"
+                serifScale={0.5}
+                serifClassName="mt-1.5 leading-[1.05]"
+              />
               {film.nepaliTitle && <span className="text-base text-ash md:text-xl">{film.nepaliTitle}</span>}
             </div>
-            <div className="flex flex-col gap-5 md:gap-6 md:pt-[34px]">
+            <div className="flex flex-col gap-5 md:gap-6 lg:pt-[34px]">
               {film.quote && (
                 <p className="font-serif text-2xl italic leading-[1.3] md:text-[38px] md:leading-[1.2]">“{film.quote}”</p>
               )}
@@ -239,7 +242,7 @@ export default async function HomePage() {
         <section className="bg-paper text-charcoal">
           <div className={`${container} flex flex-col gap-6 py-[72px] md:gap-14 md:py-32`}>
             <SectionLabel index="03" title="Latest videos" aside={<ArrowLink href="/videos">All videos</ArrowLink>} />
-            <div className="grid gap-8 md:grid-cols-[minmax(0,640px)_minmax(0,1fr)] md:items-start md:gap-16">
+            <div className="grid gap-8 md:gap-12 xl:grid-cols-2 xl:items-start xl:gap-16">
               <a href={videoUrl(lead.id)} target="_blank" rel="noopener noreferrer" className="group flex flex-col gap-3 md:gap-[18px]">
                 <div className="relative">
                   <VideoThumb video={lead} sizes="(min-width: 768px) 45vw, 100vw" />
@@ -308,16 +311,16 @@ export default async function HomePage() {
             title="Work with Makalu Flow"
             aside={<span className={`hidden text-stone sm:inline ${mono}`}>Documentaries · Brand films · Cinematography</span>}
           />
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-            <h2 className="flex flex-col font-normal">
-              <span className="font-display text-[34px] leading-[0.95] md:text-[clamp(3rem,6.1vw,5.5rem)] md:leading-[0.9]">
-                Have a story
-              </span>
-              <span className="font-serif text-[50px] italic leading-none tracking-[-0.02em] md:text-[clamp(4rem,7.2vw,6.5rem)]">
-                worth filming?
-              </span>
-            </h2>
-            <div className="flex flex-col gap-2 lg:items-end lg:pb-3">
+          <div className="flex flex-col gap-10 xl:flex-row xl:items-end xl:justify-between xl:gap-16">
+            <PageTitle
+              as="h2"
+              display="Have a story"
+              serif="worth filming?"
+              max="5.5rem"
+              serifScale={1.2}
+              className="min-w-0 xl:flex-1"
+            />
+            <div className="flex flex-col gap-2 xl:shrink-0 xl:items-end xl:pb-3">
               <span className={`text-stone ${mono}`}>Write to</span>
               <a href={`mailto:${site.email}`} className="font-serif text-[28px] hover:underline md:text-4xl">
                 {site.email}

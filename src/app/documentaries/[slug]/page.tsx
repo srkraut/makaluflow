@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DocumentaryCard } from "@/components/DocumentaryCard";
 import { ArrowUpRightIcon } from "@/components/icons";
+import { PageTitle } from "@/components/PageTitle";
 import { SectionLabel } from "@/components/SectionLabel";
 import { YouTubePlayer } from "@/components/YouTubePlayer";
 import {
@@ -100,14 +101,14 @@ export default async function DocumentaryPage({ params }: PageProps<"/documentar
             <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-stone md:text-xs">
               Documentary · {doc.year} · {runtimeLabel(doc.duration)}
             </span>
-            <h1 className="flex flex-col gap-2 font-normal">
-              <span className="font-display text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.9]">{doc.title}</span>
-              {doc.subtitle && (
-                <span className="font-serif text-[clamp(2rem,4.2vw,3.75rem)] italic leading-[1.02] tracking-[-0.01em]">
-                  {doc.subtitle}
-                </span>
-              )}
-            </h1>
+            <PageTitle
+              display={doc.title}
+              serif={doc.subtitle}
+              fit="word"
+              max="6.5rem"
+              serifScale={0.58}
+              serifClassName="mt-2 leading-[1.02]"
+            />
             {doc.nepaliTitle && <p className="text-xl text-graphite">{doc.nepaliTitle}</p>}
             {doc.quote && (
               <blockquote className="font-serif text-[28px] italic leading-[1.22] md:text-[38px]">“{doc.quote}”</blockquote>

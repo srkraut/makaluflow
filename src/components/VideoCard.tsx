@@ -13,11 +13,20 @@ export const videoMeta = (video: Video) =>
     .filter(Boolean)
     .join(" · ");
 
-export function VideoThumb({ video, sizes, className = "" }: { video: Video; sizes: string; className?: string }) {
+type VideoThumbProps = { video: Video; sizes: string; className?: string; eager?: boolean };
+
+export function VideoThumb({ video, sizes, className = "", eager = false }: VideoThumbProps) {
   const duration = formatDuration(video.durationSeconds);
   return (
     <div className={`relative aspect-video overflow-hidden bg-fog ${className}`}>
-      <Image src={videoThumbnail(video.id)} alt="" fill sizes={sizes} className="photo-bw object-cover" />
+      <Image
+        src={videoThumbnail(video.id)}
+        alt=""
+        fill
+        sizes={sizes}
+        loading={eager ? "eager" : "lazy"}
+        className="photo-bw object-cover"
+      />
       {duration && (
         <span className="absolute bottom-2 right-2 bg-black/80 px-1.5 py-0.5 font-mono text-[11px] text-paper">{duration}</span>
       )}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { documentaryImage, documentaryMeta } from "@/components/DocumentaryCard";
 import { ArrowRightIcon, PlayIcon } from "@/components/icons";
+import { PageTitle } from "@/components/PageTitle";
 import { SectionLabel } from "@/components/SectionLabel";
 import { documentaries } from "@/content/documentaries";
 import { container } from "@/lib/ui";
@@ -23,14 +24,9 @@ export default function DocumentariesPage() {
           title="Documentaries"
           aside={<span className="font-mono text-[11px] tracking-[0.12em] text-smoke md:text-xs">{documentaries.length} FILMS</span>}
         />
-        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <h1 className="flex flex-col font-normal">
-            <span className="font-display text-[clamp(3rem,9vw,8.5rem)] leading-[0.88]">Documentaries</span>
-            <span className="font-serif text-[clamp(2.75rem,8vw,7.5rem)] italic leading-[0.95] tracking-[-0.02em]">
-              from eastern Nepal.
-            </span>
-          </h1>
-          <p className="max-w-sm text-base leading-relaxed text-smoke md:pb-3 md:text-[17px]">
+        <div className="flex flex-col gap-6 md:gap-8">
+          <PageTitle display="Documentaries" serif="from eastern Nepal." />
+          <p className="max-w-md text-base leading-relaxed text-smoke md:text-[17px]">
             Films about places, rituals and communities — made on the trail, and for organisations, municipalities and
             national parks.
           </p>

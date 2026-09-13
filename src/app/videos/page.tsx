@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PlayIcon } from "@/components/icons";
+import { PageTitle } from "@/components/PageTitle";
 import { SectionLabel } from "@/components/SectionLabel";
 import { VideoCard, VideoThumb, videoMeta } from "@/components/VideoCard";
 import { site } from "@/content/site";
@@ -24,12 +25,9 @@ export default async function VideosPage() {
           title="Videos"
           aside={<span className="font-mono text-[11px] tracking-[0.12em] text-stone md:text-xs">{site.youtube.handle.toUpperCase()}</span>}
         />
-        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <h1 className="flex flex-col font-normal">
-            <span className="font-display text-[clamp(3rem,9vw,8.5rem)] leading-[0.88]">Latest from</span>
-            <span className="font-serif text-[clamp(2.75rem,8vw,7.5rem)] italic leading-[0.95] tracking-[-0.02em]">the channel.</span>
-          </h1>
-          <div className="flex max-w-sm flex-col gap-5 md:pb-3">
+        <div className="flex flex-col gap-6 md:gap-8">
+          <PageTitle display="Latest from" serif="the channel." />
+          <div className="flex max-w-md flex-col gap-5">
             <p className="text-base leading-relaxed text-graphite md:text-[17px]">
               Vlogs, treks, conversations and reports — new uploads appear here automatically.
             </p>
@@ -54,7 +52,7 @@ export default async function VideosPage() {
             rel="noopener noreferrer"
             className="group grid gap-6 border-t-[1.5px] border-charcoal pt-8 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] md:items-end md:gap-14 md:pt-12"
           >
-            <VideoThumb video={lead} sizes="(min-width: 768px) 58vw, 100vw" />
+            <VideoThumb video={lead} eager sizes="(min-width: 768px) 58vw, 100vw" />
             <div className="flex flex-col gap-4">
               <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-stone md:text-xs">Newest · {videoMeta(lead)}</span>
               <span className="font-serif text-[38px] leading-[1.02] tracking-[-0.01em] md:text-[56px]">{lead.title}</span>

@@ -82,7 +82,7 @@ export function Header() {
                 className="flex items-baseline gap-4 border-t border-line-dark py-5"
               >
                 <span className="font-mono text-[11px] text-smoke">0{index + 1}</span>
-                <span className="font-display text-[30px] leading-none">{item.label}</span>
+                <span className="font-display text-[min(6.6vw,30px)] leading-none">{item.label}</span>
               </Link>
             ))}
           </nav>

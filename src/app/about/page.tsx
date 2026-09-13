@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@/components/icons";
+import { PageTitle } from "@/components/PageTitle";
 import { SectionLabel } from "@/components/SectionLabel";
 import { photo } from "@/content/gallery";
 import { site } from "@/content/site";
@@ -27,10 +28,7 @@ export default function AboutPage() {
           />
           <div className="grid gap-12 md:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] md:gap-16">
             <div className="flex flex-col gap-8">
-              <h1 className="flex flex-col font-normal">
-                <span className="font-display text-[clamp(3rem,8vw,7.5rem)] leading-[0.88]">Behind</span>
-                <span className="font-serif text-[clamp(3rem,8.5vw,8rem)] italic leading-[0.95] tracking-[-0.02em]">the camera.</span>
-              </h1>
+              <PageTitle display="Behind" serif="the camera." max="7.5rem" />
               <div className="flex max-w-xl flex-col gap-5 text-lg leading-relaxed text-graphite">
                 <p>
                   Makalu Flow Creations is the work of a vlogger, documentary filmmaker and cinematographer from Itahari, in
@@ -72,11 +70,11 @@ export default function AboutPage() {
       <section className="bg-ink">
         <div className={`${container} flex flex-col gap-10 py-16 md:gap-14 md:py-28`}>
           <SectionLabel tone="dark" index="02" title="What Makalu Flow does" />
-          <div className="grid gap-10 md:grid-cols-3 md:gap-8">
+          <div className="grid gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
             {site.services.map((service, index) => (
               <div key={service.title} className="flex flex-col gap-4 border-t border-line-dark pt-6">
                 <span className="font-mono text-xs text-smoke">0{index + 1}</span>
-                <h2 className="font-display text-[26px] leading-[0.98] md:text-[30px]">{service.title}</h2>
+                <h2 className="font-display text-xl leading-[0.98] xl:text-2xl">{service.title}</h2>
                 <p className="leading-relaxed text-smoke">{service.body}</p>
               </div>
             ))}
@@ -104,9 +102,9 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   className="group flex items-center justify-between gap-6 border-t border-line-light py-5 md:py-7"
                 >
-                  <span className="font-display text-[32px] leading-none md:text-[64px]">{social.label}</span>
+                  <span className="font-display text-[28px] leading-none md:text-5xl lg:text-[64px]">{social.label}</span>
                   <span className="flex items-center gap-2 font-mono text-[11px] tracking-[0.1em] text-stone group-hover:text-charcoal md:text-xs">
-                    <span className="hidden sm:inline">{social.href.replace(/^https:\/\/(www\.)?/, "").replace(/\/$/, "")}</span>
+                    <span className="hidden lg:inline">{social.href.replace(/^https:\/\/(www\.)?/, "").replace(/\/$/, "")}</span>
                     <ArrowUpRightIcon className="size-4" />
                   </span>
                 </a>
